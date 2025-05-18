@@ -1637,6 +1637,8 @@ void equ(label *id, char **next) {
             }
         } else if((*labelhere).type!=EQUATE) {
             errmsg=LabelDefined;
+        } else {
+            (*labelhere).line = my_strdup(s);
         }
         *s=0;//end line
     }
